@@ -33,7 +33,7 @@ const Home: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
     // setIsLoading(true);
     const catImage = await fetchCatImage();
     setCatImageUrl(catImage.url);
-    setIsLoading(false);
+    // setIsLoading(false);
   };
   return (
     <div
