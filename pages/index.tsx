@@ -4,8 +4,8 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
-import "semantic-ui-css/semantic.min.css";
-import { Loader } from "semantic-ui-react";
+// import "semantic-ui-css/semantic.min.css";
+// import { Loader } from "semantic-ui-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +28,9 @@ const fetchCatImage = async (): Promise<SearchCatImage> => {
 
 const Home: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
   const [catImageUrl, setCatImageUrl] = useState(initialCatImageUrl);
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const hundleClick = async () => {
-    setIsLoading(true);
+    // setIsLoading(true);
     const catImage = await fetchCatImage();
     setCatImageUrl(catImage.url);
     setIsLoading(false);
@@ -46,7 +46,8 @@ const Home: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
       }}
     >
       <h1>猫画像アプリ</h1>
-      {isLoading ? <Loader active /> : <img src={catImageUrl} width={500} height="auto" />}
+      <img src={catImageUrl} width={500} height="auto" />
+      {/* {isLoading ? <Loader active /> : <img src={catImageUrl} width={500} height="auto" />} */}
       <button style={{ marginTop: 18 }} onClick={hundleClick}>
         今日の猫さん
       </button>
