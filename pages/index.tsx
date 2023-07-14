@@ -42,11 +42,14 @@ const Home: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
         flexDirection:  "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "70vh",
+        height: "100vh",
       }}
     >
       <h1>猫画像アプリ</h1>
-      <img src={catImageUrl} width={500} style={{ marginTop: 18 }} height="auto" />
+      <img src={catImageUrl} width={500} style={{
+         height: "80vh",
+         marginTop: 18 
+         }} height="auto" />
       {/* {isLoading ? <Loader active /> : <img src={catImageUrl} width={500} height="auto" />} */}
       <button style={{ marginTop: 18 }} onClick={hundleClick}>
         今日の猫さん
