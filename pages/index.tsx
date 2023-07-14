@@ -42,7 +42,7 @@ const Home: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
         flexDirection:  "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
+        height: "70vh",
       }}
     >
       <h1>猫画像アプリ</h1>
